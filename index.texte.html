@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire Fadal</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ffcc00, #ff6699);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .gift {
+            width: 150px;
+            height: 150px;
+            background: url('https://cdn-icons-png.flaticon.com/512/1046/1046750.png') no-repeat center;
+            background-size: cover;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            animation: bounce 1.5s infinite;
+        }
+        .message {
+            display: none;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Joyeux Anniversaire Fadal 🎉</h1>
+        <p>🎁 Veuillez appuyer sur le cadeau 🎁</p>
+        <div class="gift" onclick="openGift()"></div>
+        <p class="message" id="message">Yalnala Yallah may 60 crédit pour Yallah may la lo meunti beugu inchallah te mou djik la !</p>
+    </div>
+    <script>
+        function openGift() {
+            document.querySelector('.gift').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
